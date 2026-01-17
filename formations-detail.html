@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos Formations | Arlovic</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <header class="header-image-container">
+        <div class="interactive-banner">
+            <img src="images/bandeau-arlovic.jpeg" alt="Menu Arlovic" class="banner-img">
+
+            <div class="click-map">
+                <a href="formations-detail.html" class="area area-formation" title="Formation"></a>
+                <a href="coaching.html" class="area area-coaching" title="Coaching"></a>
+                <a href="team-building.html" class="area area-team-building" title="Team Building"></a>
+                <a href="hypnose.html" class="area area-hypnose" title="Hypnose"></a>
+                <a href="contact.html" class="area area-contact" title="Contact"></a>
+                <a href="qui-sommes-nous.html" class="area area-logo" title="Qui sommes-nous ?"></a>
+            </div>
+        </div>
+    </header>
+
+    <section style="background: var(--bg-light);">
+        <div class="section-title">
+            <h2>Nos Parcours de Formation</h2>
+            <p>Des solutions sur-mesure pour les entreprises et les individus.</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Management & Leadership</h3>
+                <p>Devenir un manager-coach, piloter la performance et accompagner le changement.</p>
+                <ul>
+                    <li>Fondamentaux du management</li>
+                    <li>Manager à distance</li>
+                    <li>Leadership et posture</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <p>Développer les compétences comportementales pour mieux travailler ensemble.</p>
+                <ul>
+                    <li>Communication et comportements</li>
+                    <li>Gestion du temps et des priorités</li>
+                    <li>Prise de parole en public</li>
+                </ul>
+            </div>
+
+            <div class="card" style="border-top: 5px solid var(--accent-yellow);">
+                <h3>Séminaire DISC & Couleurs</h3>
+                <p>Mieux se connaître et comprendre les autres pour une équipe soudée.</p>
+                <p><strong>Idéal pour le Team Building.</strong></p>
+                <a href="#" class="nav-cta">Acheter un test</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>L'accompagnement Individualisé</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Coaching 1to1</h3>
+                <p>Un format sur-mesure pour répondre aux besoins spécifiques de montée en compétences.</p>
+            </div>
+            <div class="card">
+                <h3>Certification Qualiopi</h3>
+                <p>Nos formations sont gage de qualité et éligibles aux financements OPCO/CPF.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact : alexandre.duret@arlovic.fr</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Petit bonus : animation du bouton burger en "X"
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>

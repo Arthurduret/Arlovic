@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Arlovic | Formation & Hypnose</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header class="header-image-container">
+        <div class="interactive-banner">
+            <img src="images/bandeau-arlovic.jpeg" alt="Menu Arlovic" class="banner-img">
+
+            <div class="click-map">
+                <a href="formations-detail.html" class="area area-formation" title="Formation"></a>
+                <a href="coaching.html" class="area area-coaching" title="Coaching"></a>
+                <a href="team-building.html" class="area area-team-building" title="Team Building"></a>
+                <a href="hypnose.html" class="area area-hypnose" title="Hypnose"></a>
+                <a href="contact.html" class="area area-contact" title="Contact"></a>
+                <a href="qui-sommes-nous.html" class="area area-logo" title="Qui sommes-nous ?"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Apprendre autrement pour évoluer durablement</h1>
+        <p>Arlovic crée des déclics. Nous transformons l'expérience d'apprentissage en une aventure humaine pour révéler le potentiel de vos équipes.</p>
+        <a href="formations-detail.html" class="nav-cta" style="padding: 15px 40px; font-size: 1.1rem;">Découvrir nos parcours</a>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Pourquoi choisir Arlovic ?</h2>
+            <p>Une approche en 3 temps inspirée des meilleures pédagogies immersives.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="tag">01. Surprendre</div>
+                <h3>Engagement</h3>
+                <p>Nous cassons les codes de la formation classique pour piquer la curiosité dès le premier échange.</p>
+            </div>
+            <div class="card">
+                <div class="tag">02. Apprendre</div>
+                <h3>Immersion</h3>
+                <p>Des modules ultra-personnalisés, alignés sur vos enjeux réels de terrain.</p>
+            </div>
+            <div class="card">
+                <div class="tag">03. Partager</div>
+                <h3>Transformation</h3>
+                <p>Un ancrage durable grâce à un accompagnement humain et des communautés apprenantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Arlovic. Tous droits réservés.</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Petit bonus : animation du bouton burger en "X"
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>

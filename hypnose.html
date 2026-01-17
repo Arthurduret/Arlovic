@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypnose Ericksonienne | Arlovic</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header class="header-image-container">
+        <div class="interactive-banner">
+            <img src="images/bandeau-arlovic.jpeg" alt="Menu Arlovic" class="banner-img">
+
+            <div class="click-map">
+                <a href="formations-detail.html" class="area area-formation" title="Formation"></a>
+                <a href="coaching.html" class="area area-coaching" title="Coaching"></a>
+                <a href="team-building.html" class="area area-team-building" title="Team Building"></a>
+                <a href="hypnose.html" class="area area-hypnose" title="Hypnose"></a>
+                <a href="contact.html" class="area area-contact" title="Contact"></a>
+                <a href="qui-sommes-nous.html" class="area area-logo" title="Qui sommes-nous ?"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hypno-hero">
+        <h1>L'Hypnose au service du changement</h1>
+        <p>Une approche thérapeutique et pragmatique pour lever les blocages et libérer votre plein potentiel.</p>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Qu'est-ce que l'Hypnose Ericksonienne ?</h2>
+            <div style="width: 80px; height: 4px; background: var(--accent-yellow); margin: 10px auto;"></div>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>Contrairement à l'hypnose de spectacle, l'hypnose Ericksonienne est une méthode douce où vous restez maître de vous-même. Elle permet d'accéder à vos ressources inconscientes pour instaurer des changements durables.</p>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-light);">
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: var(--accent-green);">Performance Pro</h3>
+                <p>Prise de parole en public, gestion du trac, confiance en soi et leadership. Apprenez à mobiliser vos ressources internes sous pression.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--accent-green);">Mieux-être</h3>
+                <p>Gestion du stress chronique, prévention du burn-out, troubles du sommeil et gestion des émotions au quotidien.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--accent-green);">Objectifs Personnels</h3>
+                <p>Arrêt du tabac, gestion du poids, dépassement des phobies ou des croyances limitantes qui freinent votre évolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="deroulement">
+        <div class="section-title">
+            <h2>Comment se passe une séance ?</h2>
+        </div>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <ol style="font-size: 1.1rem; line-height: 2;">
+                    <li><strong>L'anamnèse :</strong> Un temps d'échange pour définir votre objectif précis.</li>
+                    <li><strong>La mise en transe :</strong> Un état de relaxation profonde et de concentration.</li>
+                    <li><strong>Le travail thérapeutique :</strong> Utilisation de métaphores et de suggestions positives.</li>
+                    <li><strong>Le retour :</strong> Reprise de contact en douceur avec l'ici et maintenant.</li>
+                </ol>
+            </div>
+            <div style="flex: 1; min-width: 300px; background: var(--primary-blue); color: white; padding: 30px; border-radius: 15px;">
+                <h3>Infos Pratiques</h3>
+                <p>📍 Séances à votre cabinet ou en entreprise</p>
+                <p>⏳ Durée : Environ 1 heure</p>
+                <p>📞 Sur rendez-vous uniquement</p>
+                <a href="mailto:alexandre.duret@arlovic.fr" class="cta-yellow" style="margin-top: 20px;">Prendre RDV</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Arlovic - Alexandre Duret | Expertise Formation & Hypnose</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Petit bonus : animation du bouton burger en "X"
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>

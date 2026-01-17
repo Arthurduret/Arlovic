@@ -1,0 +1,294 @@
+:root {
+    --primary-blue: #1a2a6c;
+    --accent-red: #b21f1f;
+    --accent-yellow: #fdbb2d;
+    --bg-light: #f4f7f6;
+    --text-dark: #333;
+}
+
+body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; margin: 0; }
+
+/* Header */
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: white; position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo img { height: 50px; }
+nav a { text-decoration: none; color: var(--text-dark); margin-left: 20px; font-weight: 500; }
+.nav-cta { background: var(--accent-red); color: white !important; padding: 8px 20px; border-radius: 25px; }
+
+/* Hero Section */
+.hero {
+    padding: 100px 10%; background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
+    color: white; text-align: center;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-inline: auto; }
+
+/* Section Standard */
+section { padding: 80px 10%; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-size: 2.5rem; color: var(--primary-blue); }
+
+/* Cartes de formation (Style SoBox) */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card {
+    background: white; padding: 40px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;
+    border: 1px solid #eee; position: relative; overflow: hidden;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent-red); }
+.card h3 { color: var(--primary-blue); margin-bottom: 15px; }
+.card .tag { background: var(--bg-light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; }
+
+/* Pied de page */
+footer { background: #222; color: white; padding: 60px 10% 20px; text-align: center; }
+
+/* Menu Déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    
+    /* LE CORRECTIF : */
+    top: 100%; /* Colle le menu pile sous le texte */
+    left: 0;
+    padding-top: 10px; /* Crée une zone invisible qui maintient le menu ouvert */
+}
+
+/* On ajoute un petit triangle pour le style (optionnel) */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f8f9fa;
+    transition: 0.2s;
+}
+
+.dropdown-content a:last-child { border-bottom: none; }
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+    color: var(--accent-red);
+    padding-left: 25px; /* Petit effet de mouvement au survol */
+}
+
+/* Affiche le menu quand on survole le parent */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- ANIMATIONS DE BASE --- */
+
+/* Apparition en douceur au chargement de la page */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de flottement pour les images ou icônes */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- APPLICATION DES EFFETS --- */
+
+/* Appliquer l'apparition sur les titres et les cartes */
+.section-title, .card, .hero h1, .hero p {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Effet sur les cartes au survol (Zoom + Ombre portée) */
+.card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Effet ressort */
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--accent-red);
+}
+
+/* Animation sur les boutons (Effet de pulsation au survol) */
+.nav-cta, .cta-yellow {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-cta:hover, .cta-yellow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(178, 31, 31, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Effet de soulignement animé sur les liens du menu */
+nav a:not(.nav-cta) {
+    position: relative;
+}
+
+nav a:not(.nav-cta)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-red);
+    transition: width 0.3s ease;
+}
+
+nav a:not(.nav-cta):hover::after {
+    width: 100%;
+}
+
+/* --- LE MENU DÉROULANT (PLUS FLUIDE) --- */
+.dropdown-content {
+    display: block; /* On change le display pour pouvoir l'animer */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- CONFIGURATION RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    /* Cache le menu par défaut sur mobile */
+    nav {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Classe qui sera ajoutée par JavaScript pour montrer le menu */
+    nav.active {
+        display: flex;
+        animation: fadeInUp 0.3s ease;
+    }
+
+    /* Style du bouton Burger */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--primary-blue);
+        transition: all 0.3s ease;
+    }
+
+    /* Le menu déroulant reste simple sur mobile */
+    .dropdown-content {
+        position: static;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        background: #f9f9f9;
+        transform: none;
+    }
+}
+
+/* On s'assure que le burger est caché sur ordinateur */
+@media (min-width: 769px) {
+    .menu-toggle { display: none; }
+}
+
+
+
+/* --- NOUVELLE NAVIGATION MOSAIQUE SERRÉE --- */
+.header-image-container {
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Centre le bandeau s'il est moins large que l'écran */
+}
+
+.interactive-banner {
+    position: relative;
+    /* On réduit ici la largeur pour que ça ne soit pas trop imposant */
+    width: 90%; 
+    max-width: 950px; /* Largeur "serrée" demandée */
+    margin: 0 auto;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Conteneur des zones de clic */
+.click-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style des zones : invisibles mais cliquables */
+.area {
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0); /* Totalement transparent */
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* Supprime le flash bleu sur mobile */
+}
+
+/* Réglages précis des zones basés sur le dessin (à ajuster selon ton export image) */
+.area-formation { top: 0; left: 0; width: 22%; height: 60%; }
+.area-coaching { top: 0; left: 22%; width: 25%; height: 45%; }
+.area-team-building { top: 10%; left: 47%; width: 35%; height: 80%; }
+.area-contact { top: 0; right: 0; width: 25%; height: 40%; }
+.area-hypnose { bottom: 0; right: 0; width: 30%; height: 60%; }
+.area-logo { bottom: 5%; left: 5%; width: 25%; height: 45%; }
