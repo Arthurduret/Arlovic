@@ -243,52 +243,50 @@ nav a:not(.nav-cta):hover::after {
 
 
 
+
 /* --- NOUVELLE NAVIGATION MOSAIQUE SERRÉE --- */
-.header-image-container {
+.header-panoramique {
     width: 100%;
-    background: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center; /* Centre le bandeau s'il est moins large que l'écran */
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-.interactive-banner {
+.banner-crop {
     position: relative;
-    /* On réduit ici la largeur pour que ça ne soit pas trop imposant */
-    width: 90%; 
-    max-width: 950px; /* Largeur "serrée" demandée */
-    margin: 0 auto;
+    width: 100%;
+    /* On utilise une hauteur automatique ou calculée pour éviter de rogner */
+    height: auto; 
+    max-height: 300px; /* Limite la hauteur pour garder l'aspect panoramique */
+    display: flex;
+    align-items: flex-start; /* Aligne en haut pour éviter de couper le haut du logo */
+    overflow: hidden;
 }
 
-.banner-img {
+.svg-fluid {
     width: 100%;
-    height: auto;
+    height: auto; /* L'image prend sa hauteur naturelle par rapport à la largeur */
     display: block;
+    /* On change 'cover' par 'contain' si on ne veut RIEN couper, 
+       ou on garde 'cover' avec un alignement en haut */
+    object-fit: contain; 
+    object-position: top center; 
 }
 
-/* Conteneur des zones de clic */
-.click-map {
+/* On ajuste l'overlay pour qu'il suive exactement la taille de l'image */
+.overlay-clic {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
-    width: 100%;
+    width: 100%; 
     height: 100%;
+    z-index: 5;
 }
 
-/* Style des zones : invisibles mais cliquables */
-.area {
-    position: absolute;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0); /* Totalement transparent */
-    border: none;
-    outline: none;
-    -webkit-tap-highlight-color: transparent; /* Supprime le flash bleu sur mobile */
-}
-
-/* Réglages précis des zones basés sur le dessin (à ajuster selon ton export image) */
-.area-formation { top: 0; left: 0; width: 22%; height: 60%; }
-.area-coaching { top: 0; left: 22%; width: 25%; height: 45%; }
-.area-team-building { top: 10%; left: 47%; width: 35%; height: 80%; }
-.area-contact { top: 0; right: 0; width: 25%; height: 40%; }
-.area-hypnose { bottom: 0; right: 0; width: 30%; height: 60%; }
-.area-logo { bottom: 5%; left: 5%; width: 25%; height: 45%; }
+/* On découpe la largeur en tranches selon tes courbes */
+.area-formation { left: 0; width: 15%; }
+.area-coaching { left: 15%; width: 25%; }
+.area-team-building { left: 40%; width: 30%; }
+.area-contact { right: 0; top: 0; width: 25%; height: 50%; } /* Zone Contact en haut */
+.area-logo { right: 0; bottom: 0; width: 25%; height: 50%; } /* Zone Logo en bas */
