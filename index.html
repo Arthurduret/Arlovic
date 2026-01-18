@@ -7,7 +7,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
+        <nav class="sticky-nav" id="stickyNav">
+            <div class="sticky-container">
+                <a href="index.html">
+                    <img src="images/logo-arlovic.jpeg" alt="Arlovic Logo" class="nav-logo-img">
+                </a>
+                    <ul class="sticky-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="formations-detail.html">Formation</a></li>
+                        <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
+                        <li><a href="team-building.html" class="link-team">Team Building</a></li>
+                        <li><a href="hypnose.html" class="link-bien-etre">Bien-être</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
         <header class="header-panoramique">
             <div class="banner-crop">
                 <img src="images/bandeau-arlovic.svg" alt="Arlovic" class="svg-fluid">
@@ -22,6 +36,8 @@
                 </div>
             </div>
         </header>
+
+        
 
         <section class="hero">
             <h1>Apprendre autrement pour évoluer durablement</h1>
@@ -67,5 +83,6 @@
                 menuToggle.classList.toggle('is-active');
             });
         </script>
+        <script src="script.js"></script>
     </body>
     </html>
