@@ -3,16 +3,18 @@
    ========================================================================== */
 :root {
     /* Couleurs principales */
-    --primary-blue: #1a2a6c;
-    --accent-red: #b21f1f;
-    --accent-yellow: #fdbb2d;
+    --primary-blue: #9400d3;
+    --accent-red: #97271B;
+    --accent-yellow: #f9b233;
     --bg-light: #f4f7f6;
     --text-dark: #333;
 
     /* Couleurs spécifiques aux catégories */
+    --color-formation : #97271B;
     --color-coaching: #006633;
     --color-team: #f9b233;
     --color-bien-etre: #2d2e83;
+    --color-basic: #333;
 }
 
 html, body {
@@ -159,6 +161,8 @@ html, body {
 .link-coaching:hover  { color: var(--color-coaching) !important; }
 .link-team:hover      { color: var(--color-team) !important; }
 .link-bien-etre:hover { color: var(--color-bien-etre) !important; }
+.link-formation:hover { color: var(--color-formation) !important;}
+.link-basic:hover {color: var(--color-basic) !important;}
 
 /* Couleur par défaut au survol (Rouge Arlovic) */
 .sticky-links a:not(.link-coaching):not(.link-team):not(.link-bien-etre):hover { 
