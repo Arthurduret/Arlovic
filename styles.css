@@ -245,48 +245,26 @@ nav a:not(.nav-cta):hover::after {
 
 
 /* --- NOUVELLE NAVIGATION MOSAIQUE SERRÉE --- */
+/* --- HEADER PANORAMIQUE --- */
 .header-panoramique {
     width: 100%;
     background: #fff;
-    padding: 0;
     margin: 0;
-    overflow: hidden;
+    padding: 0;
 }
 
 .banner-crop {
     position: relative;
     width: 100%;
-    /* On utilise une hauteur automatique ou calculée pour éviter de rogner */
-    height: auto; 
-    max-height: 300px; /* Limite la hauteur pour garder l'aspect panoramique */
-    display: flex;
-    align-items: flex-start; /* Aligne en haut pour éviter de couper le haut du logo */
+    height: 300px; /* Ajuste cette hauteur si l'image te parait trop grande */
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .svg-fluid {
     width: 100%;
-    height: auto; /* L'image prend sa hauteur naturelle par rapport à la largeur */
-    display: block;
-    /* On change 'cover' par 'contain' si on ne veut RIEN couper, 
-       ou on garde 'cover' avec un alignement en haut */
-    object-fit: contain; 
-    object-position: top center; 
-}
-
-/* On ajuste l'overlay pour qu'il suive exactement la taille de l'image */
-.overlay-clic {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
     height: 100%;
-    z-index: 5;
+    object-fit: cover; /* Remplit l'espace sans déformer */
+    object-position: center;
 }
-
-/* On découpe la largeur en tranches selon tes courbes */
-.area-formation { left: 0; width: 15%; }
-.area-coaching { left: 15%; width: 25%; }
-.area-team-building { left: 40%; width: 30%; }
-.area-contact { right: 0; top: 0; width: 25%; height: 50%; } /* Zone Contact en haut */
-.area-logo { right: 0; bottom: 0; width: 25%; height: 50%; } /* Zone Logo en bas */
