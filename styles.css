@@ -254,14 +254,37 @@ nav a:not(.nav-cta):hover::after {
 .banner-crop {
     position: relative;
     width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
+    height: auto; /* Laisse le SVG définir sa hauteur naturelle */
+    display: block;
 }
 
 .svg-fluid {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
+    /* Supprimez object-fit: cover s'il rognait le haut de l'image */
 }
+
+/* --- ZONES DE CLIC ADAPTÉES AU VISUEL --- */
+.overlay-clic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.zone {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+}
+
+/* Positions ajustées selon votre dernier visuel */
+.area-formation { top: 15%; left: 3%; width: 11%; height: 25%; }
+.area-coaching { top: 2%; left: 23%; width: 10%; height: 25%; }
+.area-team-building { top: 20%; left: 50%; width: 18%; height: 30%; }
+.area-logo { top: 0%; right: 0%; width: 22%; height: 25%; }
+.area-contact { top: 29%; right: 4%; width: 7%; height: 10%; }
+.area-bien-etre { top: 60%; right: 5%; width: 15%; height: 30%; }
