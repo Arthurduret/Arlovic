@@ -1,27 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
 
-document.querySelectorAll('.m-hover').forEach(element => {
-    element.addEventListener('click', function() {
-        const link = this.getAttribute('data-link');
-        if (link) window.location.href = link;
-    });
-});
+    if (burger && navLinks) {
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('is-active');
+        });
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header-panoramique');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-window.addEventListener('scroll', function() {
-    const stickyNav = document.getElementById('stickyNav');
-    
-    // Si on dépasse 200px de scroll, on affiche le menu
-    if (window.scrollY > 200) {
-        stickyNav.classList.add('visible');
-    } else {
-        stickyNav.classList.remove('visible');
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.classList.remove('is-active');
+            });
+        });
     }
 });

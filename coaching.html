@@ -7,67 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <nav class="sticky-nav" id="stickyNav">
-        <div class="sticky-container">
-            <a href="index.html">
-                <img src="images/logo-arlovic.jpeg" alt="Arlovic Logo" class="nav-logo-img">
-            </a>
-                <ul class="sticky-links">
-                    <li><a href="index.html" class="link-basic">Accueil</a></li>
-                    <li><a href="formations-detail.html" class="link-formation">Formation</a></li>
-                    <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
-                    <li><a href="team-building.html" class="link-team">Team Building</a></li>
-                    <li><a href="hypnose.html" class="link-bien-etre">Bien-être</a></li>
-                    <li><a href="contact.html" class="link-basic">Contact</a></li>
-                </ul>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html"><img src="images/logo-arlovic.jpeg" alt="Arlovic" class="nav-logo-img"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="formations.html" class="link-formation">Formations</a></li>
+                <li><a href="coaching.html" class="link-coaching active">Coaching</a></li>
+                <li><a href="team-building.html" class="link-team">Team Building</a></li>
+                <li><a href="bien-etre.html" class="link-bien-etre">Bien-être</a></li>
+                <li><a href="qui-sommes-nous.html" class="link-contact">Qui sommes-nous</a></li>
+                <li><a href="connexion.html" class="link-contact">Connexion</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Contact</a>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <header class="header-panoramique">
-        <div class="banner-crop">
-            <img src="images/bandeau-arlovic.svg" alt="Arlovic" class="svg-fluid">
-            
-            <div class="overlay-clic">
-                <a href="formations-detail.html" class="zone area-formation" title="Formation"></a>
-                <a href="coaching.html" class="zone area-coaching" title="Coaching"></a>
-                <a href="team-building.html" class="zone area-team-building" title="Team Building"></a>
-                <a href="index.html" class="zone area-logo" title="Arlovic | Formation & Hypnose"></a>
-                <a href="contact.html" class="zone area-contact" title="Contact"></a>
-                <a href="hypnose.html" class="zone area-bien-etre" title="Bien-être"></a>
-            </div>
-        </div>
-    </header>
 
-    <section class="section-title">
-        <h2>Coaching Individuel & Managérial</h2>
+    <header class="hero">
+        <h1>Coaching individuel & managérial</h1>
         <p>Provoquer des déclics pour transformer votre posture professionnelle.</p>
-    </section>
+    </header>
+    <div class="disc-strip"><span class="d"></span><span class="i"></span><span class="s"></span><span class="c"></span></div>
 
     <section>
         <div class="grid">
-            <div class="card">
+            <div class="card i">
                 <h3>Coaching de Manager</h3>
                 <p>Développez votre leadership, apprenez à déléguer et gérez vos priorités avec sérénité.</p>
             </div>
-            <div class="card">
+            <div class="card d">
                 <h3>Coaching de Performance</h3>
                 <p>Optimisez vos résultats et préparez vos prises de parole ou négociations stratégiques.</p>
             </div>
-            <div class="card">
+            <div class="card s">
                 <h3>Accompagnement au Changement</h3>
                 <p>Réussissez vos transitions professionnelles grâce à une approche centrée sur l'humain.</p>
             </div>
         </div>
     </section>
 
-    <section style="background-color: var(--light-bg); text-align: center;">
-        <h3>Une approche multimodale</h3>
-        <p>Nous utilisons le coaching classique enrichi par l'hypnose pour lever les blocages inconscients.</p>
-        <a href="contact.html" class="cta-yellow" style="margin-top: 20px;">Prendre rendez-vous</a>
+    <section class="bg-light" style="text-align: center;">
+        <div class="section-title">
+            <h2>Une approche multimodale</h2>
+            <p>Nous utilisons le coaching classique enrichi par l'hypnose pour lever les blocages inconscients.</p>
+        </div>
+        <a href="contact.html" class="btn btn-yellow">Prendre rendez-vous</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 Arlovic. Tous droits réservés.</p>
+        <p>&copy; 2026 Arlovic. Tous droits réservés. — <a href="mentions-legales.html">Mentions légales</a> — <a href="mailto:alexandre.duret@arlovic.fr">alexandre.duret@arlovic.fr</a></p>
     </footer>
     <script src="script.js"></script>
 </body>

@@ -7,73 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <nav class="sticky-nav" id="stickyNav">
-        <div class="sticky-container">
-            <a href="index.html">
-                <img src="images/logo-arlovic.jpeg" alt="Arlovic Logo" class="nav-logo-img">
-            </a>
-                <ul class="sticky-links">
-                    <li><a href="index.html" class="link-basic">Accueil</a></li>
-                    <li><a href="formations-detail.html" class="link-formation">Formation</a></li>
-                    <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
-                    <li><a href="team-building.html" class="link-team">Team Building</a></li>
-                    <li><a href="hypnose.html" class="link-bien-etre">Bien-être</a></li>
-                    <li><a href="contact.html" class="link-basic">Contact</a></li>
-                </ul>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html"><img src="images/logo-arlovic.jpeg" alt="Arlovic" class="nav-logo-img"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="formations.html" class="link-formation">Formations</a></li>
+                <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
+                <li><a href="team-building.html" class="link-team active">Team Building</a></li>
+                <li><a href="bien-etre.html" class="link-bien-etre">Bien-être</a></li>
+                <li><a href="qui-sommes-nous.html" class="link-contact">Qui sommes-nous</a></li>
+                <li><a href="connexion.html" class="link-contact">Connexion</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Contact</a>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <header class="header-panoramique">
-        <div class="banner-crop">
-            <img src="images/bandeau-arlovic.svg" alt="Arlovic" class="svg-fluid">
-            
-            <div class="overlay-clic">
-                <a href="formations-detail.html" class="zone area-formation" title="Formation"></a>
-                <a href="coaching.html" class="zone area-coaching" title="Coaching"></a>
-                <a href="team-building.html" class="zone area-team-building" title="Team Building"></a>
-                <a href="index.html" class="zone area-logo" title="Arlovic | Formation & Hypnose"></a>
-                <a href="contact.html" class="zone area-contact" title="Contact"></a>
-                <a href="hypnose.html" class="zone area-bien-etre" title="Bien-être"></a>
-            </div>
-        </div>
-    </header>
 
-    <section class="section-title">
-        <h2>Fédérer vos équipes durablement</h2>
+    <header class="hero">
+        <h1>Fédérer vos équipes durablement</h1>
         <p>Apprendre ensemble pour transformer collectivement.</p>
-    </section>
+    </header>
+    <div class="disc-strip"><span class="d"></span><span class="i"></span><span class="s"></span><span class="c"></span></div>
 
     <section>
         <div class="grid">
-            <div class="card" style="border-bottom-color: var(--accent-yellow);">
+            <div class="card c">
                 <h3>Séminaire DISC & Couleurs</h3>
                 <p>Comprenez les styles de communication de chacun pour une collaboration fluide et sans friction.</p>
             </div>
-            <div class="card" style="border-bottom-color: var(--accent-yellow);">
+            <div class="card i">
                 <h3>Ateliers Intelligence Collective</h3>
                 <p>Mobilisez les talents de chacun pour résoudre des problèmes complexes et innover ensemble.</p>
             </div>
-            <div class="card" style="border-bottom-color: var(--accent-yellow);">
+            <div class="card s">
                 <h3>Cohésion de Groupe</h3>
                 <p>Créez un réel esprit d'équipe et installez un cadre de confiance durable.</p>
             </div>
         </div>
     </section>
 
-    <section class="test-box">
-        <div class="test-content">
-            <h2>Prêt à dynamiser votre équipe ?</h2>
-            <p>Nos formats sont immersifs, concrets et conçus pour provoquer des changements visibles dès le lendemain.</p>
-        </div>
-        <div class="test-action">
-            <a href="contact.html" class="cta-yellow">Demander un devis</a>
+    <section>
+        <div class="cta-box">
+            <div>
+                <h2>Prêt à dynamiser votre équipe ?</h2>
+                <p>Nos formats sont immersifs, concrets et conçus pour provoquer des changements visibles dès le lendemain.</p>
+            </div>
+            <a href="contact.html" class="btn btn-yellow">Demander un devis</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Arlovic. Tous droits réservés.</p>
+        <p>&copy; 2026 Arlovic. Tous droits réservés. — <a href="mentions-legales.html">Mentions légales</a> — <a href="mailto:alexandre.duret@arlovic.fr">alexandre.duret@arlovic.fr</a></p>
     </footer>
     <script src="script.js"></script>
-
 </body>
 </html>

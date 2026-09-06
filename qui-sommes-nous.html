@@ -7,57 +7,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="sticky-nav" id="stickyNav">
-        <div class="sticky-container">
-            <a href="index.html">
-                <img src="images/logo-arlovic.jpeg" alt="Arlovic Logo" class="nav-logo-img">
-            </a>
-                <ul class="sticky-links">
-                    <li><a href="index.html" class="link-basic">Accueil</a></li>
-                    <li><a href="formations-detail.html" class="link-formation">Formation</a></li>
-                    <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
-                    <li><a href="team-building.html" class="link-team">Team Building</a></li>
-                    <li><a href="hypnose.html" class="link-bien-etre">Bien-être</a></li>
-                    <li><a href="contact.html" class="link-basic">Contact</a></li>
-                </ul>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html"><img src="images/logo-arlovic.jpeg" alt="Arlovic" class="nav-logo-img"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="formations.html" class="link-formation">Formations</a></li>
+                <li><a href="coaching.html" class="link-coaching">Coaching</a></li>
+                <li><a href="team-building.html" class="link-team">Team Building</a></li>
+                <li><a href="bien-etre.html" class="link-bien-etre">Bien-être</a></li>
+                <li><a href="qui-sommes-nous.html" class="link-contact active">Qui sommes-nous</a></li>
+                <li><a href="connexion.html" class="link-contact">Connexion</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Contact</a>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <header class="header-panoramique">
-        <div class="banner-crop">
-            <img src="images/bandeau-arlovic.svg" alt="Arlovic" class="svg-fluid">
-            
-            <div class="overlay-clic">
-                <a href="formations-detail.html" class="zone area-formation" title="Formation"></a>
-                <a href="coaching.html" class="zone area-coaching" title="Coaching"></a>
-                <a href="team-building.html" class="zone area-team-building" title="Team Building"></a>
-                <a href="index.html" class="zone area-logo" title="Arlovic | Formation & Hypnose"></a>
-                <a href="contact.html" class="zone area-contact" title="Contact"></a>
-                <a href="hypnose.html" class="zone area-bien-etre" title="Bien-être"></a>
-            </div>
-        </div>
-    </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));">
+    <header class="hero">
         <h1>L'humain au cœur de la performance</h1>
         <p>Découvrez l'histoire d'Arlovic et la vision d'Alexandre Duret.</p>
-    </section>
+    </header>
+    <div class="disc-strip"><span class="d"></span><span class="i"></span><span class="s"></span><span class="c"></span></div>
 
     <section>
-        <div class="grid" style="align-items: center;">
+        <div class="grid-2">
             <div>
-                <img src="images/formateur.jpg" alt="Alexandre Duret" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
+                <img src="images/logo-arlovic.jpeg" alt="Alexandre Duret" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
             </div>
             <div>
-                <h2 style="color: var(--primary-blue); text-align: left;">Alexandre Duret</h2>
+                <h2 style="color: var(--navy);">Alexandre Duret</h2>
                 <p>Expert en management et développement personnel avec plus de 15 ans d'expérience, j'accompagne les entreprises et les individus dans leur transformation.</p>
-                <p style="margin-top: 15px;">Mon approche allie la rigueur des techniques managériales à la finesse de l'hypnose Ericksonienne pour créer des déclics durables.</p>
+                <p>Mon approche allie la rigueur des techniques managériales, la finesse du modèle DISC et l'accompagnement par l'hypnose Ericksonienne pour créer des déclics durables.</p>
+                <a href="contact.html" class="btn btn-red">Échanger avec moi</a>
             </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="section-title">
+            <h2>Nos valeurs</h2>
+        </div>
+        <div class="grid">
+            <div class="card d"><h3>Exigence</h3><p>Des contenus rigoureux, construits sur des méthodes reconnues et un vrai savoir-faire terrain.</p></div>
+            <div class="card i"><h3>Humanité</h3><p>Chaque accompagnement part des personnes, de leurs besoins réels et de leur contexte.</p></div>
+            <div class="card s"><h3>Confiance</h3><p>Un cadre bienveillant et confidentiel pour permettre les vrais changements.</p></div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Arlovic. Tous droits réservés.</p>
+        <p>&copy; 2026 Arlovic. Tous droits réservés. — <a href="mentions-legales.html">Mentions légales</a> — <a href="mailto:alexandre.duret@arlovic.fr">alexandre.duret@arlovic.fr</a></p>
     </footer>
     <script src="script.js"></script>
-    </body>
+</body>
 </html>
